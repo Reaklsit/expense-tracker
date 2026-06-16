@@ -1,4 +1,4 @@
-import getTransactions from "../app/generated/prisma/actions/getTransactions";
+import getTransactions from "@/app/generated/prisma/actions/getTransactions";
 import { Transaction } from "@prisma/client";
 import TransactionItem from "./TransactionItem";
 

@@ -1,6 +1,6 @@
 "use client";
 import { useRef } from "react";
-import addTransactions from "../app/generated/prisma/actions/addTransactions";
+import addTransactions from "@/app/generated/prisma/actions/addTransactions";
 import { toast } from "react-toastify";
 
 const AddTransactions = () => {

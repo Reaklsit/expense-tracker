@@ -1,4 +1,4 @@
-import getUserBalance from "../app/generated/prisma/actions/getUserBalance";
+import getUserBalance from "@/app/generated/prisma/actions/getUserBalance";
 import { addCommas } from "@/lib/utils";
 
 const Balance = async () => {
