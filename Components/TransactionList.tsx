@@ -1,5 +1,6 @@
-import getTransactions from "@/app/generated/prisma/actions/getTransactions";
+import getTransactions from "../app/generated/prisma/actions/getTransactions";
 import { Transaction } from "@prisma/client";
+import TransactionItem from "./TransactionItem";
 
 const TransactionList = async () => {
   const { transactions, error } = await getTransactions();
@@ -13,7 +14,7 @@ const TransactionList = async () => {
       <ul className="list">
         {transactions &&
           transactions.map((transaction: Transaction) => (
-            <p key={transaction.id}>{transaction.text}</p>
+            <TransactionItem key={transaction.id} transaction={transaction} />
           ))}
       </ul>
     </>
