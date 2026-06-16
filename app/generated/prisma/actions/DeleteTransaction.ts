@@ -1,9 +1,9 @@
-
+"use server";
 import {db} from "@/lib/db";
 import {auth} from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 
-async function deleteTransaction(transactionId: string) : Promise<{
+export async function deleteTransaction(transactionId: string) : Promise<{
     success?: boolean;
     error?: string;
 }> {

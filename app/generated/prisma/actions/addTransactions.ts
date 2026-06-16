@@ -1,4 +1,4 @@
-
+"use server";
 import {auth} from "@clerk/nextjs/server";
 import {db} from "@/lib/db";
 import { revalidatePath } from "next/cache";
@@ -13,7 +13,7 @@ interface TransactionResult {
   error?: string;
 }
 
-async function addTransactions(formData: FormData): Promise<TransactionResult> {
+export async function addTransactions(formData: FormData): Promise<TransactionResult> {
   const textValue = formData.get("text");
   const amountValue = formData.get("amount");
 
